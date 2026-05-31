@@ -52,6 +52,10 @@ Route::post('/review/delete', [ReviewController::class, 'delete'])->name('review
 Route::get('/login', [AuthController::class, 'loginForm'])->name('loginForm');
 Route::get('/register', [AuthController::class, 'registerForm'])->name('registerForm');
 
+// Admin registration routes (protected by secret key)
+Route::get('/admin/register', [AuthController::class, 'adminRegisterForm'])->name('adminRegisterForm');
+Route::post('/admin/register', [AuthController::class, 'adminRegister'])->name('adminRegister');
+
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 
