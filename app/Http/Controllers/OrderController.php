@@ -6,8 +6,7 @@ use App\Models\Order;
 use App\Models\Watch;
 use App\Models\OrderItem;
 use Illuminate\Http\Request;
-use App\Mail\OrderStatusMail;
-use Illuminate\Support\Facades\Mail;
+
 
 class OrderController extends Controller
 {
@@ -62,15 +61,7 @@ class OrderController extends Controller
         $order->status = $newStatus;
         $order->save();
 
-        $mailData = [
-            'title' => 'Order Status Updated',
-            'name' => $order->user->name,
-            'order_id' => $order->id,
-            'status' => $order->status,
-        ];
 
-        Mail::to($order->user->email)
-            ->send(new OrderStatusMail($mailData));
 
         return redirect()->route('allOrders')
             ->with('success', 'Order status updated successfully!');

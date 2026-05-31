@@ -10,8 +10,7 @@ use App\Models\User;
 use App\Models\Review;
 use App\Models\Order;
 use App\Models\OrderItem;
-use App\Mail\OrderPlacedMail;
-use Illuminate\Support\Facades\Mail;
+
 
 class BuyerController extends Controller
 {
@@ -235,14 +234,7 @@ class BuyerController extends Controller
             $orderItem->save();
         }
 
-        $mailData = [
-            'customer_name' => $req->customer_name,
-            'order_id' => $order->id,
-            'total_amount' => $total_price,
-            'status' => $order->status,
-        ];
 
-        Mail::to($order->user->email)->send(new OrderPlacedMail($mailData));
 
         Cart::where('user_id', $user_id)->delete();
 
