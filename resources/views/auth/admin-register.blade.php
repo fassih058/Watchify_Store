@@ -1,6 +1,6 @@
 @extends('buyer.layout')
 
-@section('title', 'User Registration')
+@section('title', 'Admin Registration')
 
 @section('styles')
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -32,15 +32,15 @@
 
 <div class="auth-wrapper">
     <div class="auth-card">
-        <h1>Create Your Account</h1>
-        <p>Join Watchify and start shopping for premium watches today.</p>
+        <h1>Admin Portal</h1>
+        <p>Create an admin account to manage the Watchify store.</p>
 
-        <form action="{{ route('register') }}" method="POST">
+        <form action="{{ route('adminRegister') }}" method="POST">
             @csrf
 
             <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" name="name" id="name" value="{{ old('name') }}" required placeholder="e.g. John Doe">
+                <input type="text" name="name" id="name" value="{{ old('name') }}" required placeholder="e.g. Umer Nisar">
             </div>
 
             <div class="form-group">
@@ -58,7 +58,12 @@
                 <p id="char" class="invalid">A <b>special character</b></p>
             </div>
 
-            <button type="submit" class="btn-auth">Create Account</button>
+            <div class="form-group">
+                <label for="secret_key">Secret Key</label>
+                <input type="password" name="secret_key" id="secret_key" required placeholder="Enter admin secret key">
+            </div>
+
+            <button type="submit" class="btn-auth">Create Admin Account</button>
         </form>
 
         <div class="auth-footer">
