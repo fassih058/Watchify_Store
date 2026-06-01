@@ -46,11 +46,7 @@
                 <p class="product-price">Rs. {{ number_format($watch->price) }}</p>
 
                 <div class="button-group">
-                    <form action="{{ route('watchDetails') }}" method="POST" class="form-inline">
-                           @csrf
-                        <input type="hidden" name="id" value="{{ $watch->id }}">
-                        <button type="submit" class="btn-view">Details</button>
-                    </form>
+                    <a href="{{ route('watchDetails') }}?id={{ $watch->id }}" class="btn-view">Details</a>
 
                     @if($watch->stock > 0)
                     <form action="{{ route('addToCart') }}" method="POST" class="form-inline">
