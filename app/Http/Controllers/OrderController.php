@@ -42,7 +42,7 @@ class OrderController extends Controller
         $oldStatus = $order->status;
 
         if ($oldStatus === $newStatus) {
-            return redirect()->route('allOrders')
+            return redirect()->route('admin.orders.index')
                 ->with('success', 'Same Status. No Change!');
         }
 
@@ -61,9 +61,7 @@ class OrderController extends Controller
         $order->status = $newStatus;
         $order->save();
 
-
-
-        return redirect()->route('allOrders')
+        return redirect()->route('admin.orders.index')
             ->with('success', 'Order status updated successfully!');
     }
 }

@@ -35,7 +35,7 @@ class WatchController extends Controller
 
         $watch->save();
 
-        return redirect()->route('adminDashboard')->with('success', 'Watch added successfully!');
+        return redirect()->route('admin.dashboard')->with('success', 'Watch added successfully!');
     }
 
     public function update(Request $req){
@@ -57,7 +57,7 @@ class WatchController extends Controller
 
         $watch->save();
 
-        return redirect()->route('adminDashboard')->with('success', 'Watch updated successfully!');
+        return redirect()->route('admin.dashboard')->with('success', 'Watch updated successfully!');
     }
 
     public function edit(Request $req){
@@ -69,6 +69,6 @@ class WatchController extends Controller
     public function destroy(Request $req){
         $id= $req->id;
         Watch::destroy($id);
-        return redirect()->route('adminDashboard')->with('success', 'Watch deleted successfully!');
+        return redirect()->route('admin.dashboard')->with('success', 'Watch deleted successfully!');
     }
 }

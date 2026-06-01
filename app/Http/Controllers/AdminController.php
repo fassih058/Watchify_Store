@@ -37,6 +37,6 @@ class AdminController extends Controller
 
         User::destroy($id);
 
-        return redirect()->route('allUsers')->with('success', 'User deleted successfully!');
+        return redirect()->route('admin.users.index')->with('success', 'User deleted successfully!');
     }
 }
