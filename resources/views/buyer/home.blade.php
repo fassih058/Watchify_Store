@@ -18,9 +18,12 @@
 @endif
 
 <section class="hero">
-    <span class="hero-label">Established 2025</span>
-    <h1>The Art of Precision</h1>
-    <p>Explore a curated collection of timepieces that blend heritage with modern engineering.</p>
+    <div class="hero-content">
+        <span class="hero-label">Established 2025</span>
+        <h1>The Art of Precision</h1>
+        <p>Explore a curated collection of timepieces that blend heritage with modern engineering.</p>
+        <a href="{{ route('featured') }}" class="hero-cta">Explore Collection</a>
+    </div>
 </section>
 
 <section class="featured-products">

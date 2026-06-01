@@ -61,10 +61,10 @@
 
     <div class="nav-actions">
         @if(Auth::user())
-        <a href="{{ route('cartItems') }}" class="nav-link">
-            Cart
+        <a href="{{ route('cartItems') }}" class="nav-link cart-icon-link">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-label">Cart</span>
         </a>
-
         @endif
 
         <form action="{{route('search')}}" method="GET" class="search-container">

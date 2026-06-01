@@ -166,8 +166,37 @@
 
 .nav-actions {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     align-items: center;
+}
+
+.cart-icon-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.cart-icon-link i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.cart-label {
+    font-family: 'Inter', sans-serif;
+}
+
+.cart-icon-link:hover {
+    color: #000;
+}
+
+.cart-icon-link:hover i {
+    transform: scale(1.15) translateY(-2px);
 }
 
 .user-greeting {
