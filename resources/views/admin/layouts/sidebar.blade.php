@@ -25,12 +25,12 @@
         <span class="sidebar-text">Watches</span>
     </a>
 
-    <a href="{{ route('allOrders') }}"
+    <a href="{{ route('admin.orders.index') }}"
        class="nav-item {{ request()->is('admin/orders*') ? 'active' : '' }}">
         <span class="sidebar-text">Orders</span>
     </a>
 
-    <a href="{{ route('allUsers') }}"
+    <a href="{{ route('admin.users.index') }}"
        class="nav-item {{ request()->is('admin/users*') ? 'active' : '' }}">
         <span class="sidebar-text">Users</span>
     </a>
