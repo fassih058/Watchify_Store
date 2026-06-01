@@ -25,7 +25,7 @@
 
 <div class="page-header">
     <h1 class="page-title">Manage Watches</h1>
-    <a href="{{ route('addWatch') }}" class="btn-add">Add New Watch</a>
+    <a href="{{ route('admin.watches.add') }}" class="btn-add">Add New Watch</a>
 </div>
 
 <div class="table-container">
@@ -57,13 +57,13 @@
                 <td>{{ $watch->featured === 'yes' ? 'Yes' : 'No' }}</td>
                 <td class="desc-text">{{ $watch->description }}</td>
                 <td class="actions">
-                    <form action="{{ route('editWatch') }}" method="POST">
+                    <form action="{{ route('admin.watches.edit') }}" method="POST">
                         @csrf
                         <input type="hidden" name="id" value="{{ $watch->id }}">
                         <button type="submit" class="btn-edit">Edit</button>
                     </form>
 
-                    <form action="{{ route('deleteWatch') }}" method="POST" onsubmit="return confirm('Delete this watch?');">
+                    <form action="{{ route('admin.watches.delete') }}" method="POST" onsubmit="return confirm('Delete this watch?');}">
                         @csrf
                         <input type="hidden" value="{{$watch->id}}" name="id">
                         <button type="submit" class="btn-delete">Delete</button>

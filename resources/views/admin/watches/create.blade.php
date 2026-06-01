@@ -12,7 +12,7 @@
 
 
 <div class="form-container">
-    <form action="{{ route('storeWatch') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.watches.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="form-group">
@@ -52,7 +52,7 @@
 
         <div class="form-actions">
             <button type="submit" class="btn-submit">Save Watch</button>
-            <a href="{{ route('adminDashboard') }}" class="btn-cancel">Cancel</a>
+            <a href="{{ route('admin.dashboard') }}" class="btn-cancel">Cancel</a>
         </div>
     </form>
 </div>

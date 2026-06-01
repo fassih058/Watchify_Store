@@ -59,14 +59,14 @@
         <div class="info-item">
             <label class="info-label">Transaction Date</label>
             <p class="info-value">
-                {{ $orderItems[0]->order->created_at->format('d M Y, h:i A') }}
+                {{ $orderItems[0]->order->created_at ? $orderItems[0]->order->created_at->format('d M Y, h:i A') : 'N/A' }}
             </p>
         </div>
 
     </div>
 
 
-    <form action="{{ route('updateOrderStatus') }}" method="POST" class="status-form">
+    <form action="{{ route('admin.orders.updateStatus') }}" method="POST" class="status-form">
         @csrf
         <input type="hidden" name="order_id" value="{{ $orderItems[0]->order->id }}">
 

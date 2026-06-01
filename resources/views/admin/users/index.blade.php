@@ -62,11 +62,11 @@
                     @endif
                 </td>
 
-                <td>{{ $user->created_at->format('d M Y') }}</td>
+                <td>{{ $user->created_at ? $user->created_at->format('d M Y') : 'N/A' }}</td>
 
                 <td>
                     @if($user->role !== 'admin')
-                        <form action="{{ route('deleteUser') }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');" class="action-form">
+                        <form action="{{ route('admin.users.delete') }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');" class="action-form">
                             @csrf
                             <input type="hidden" name="id" value="{{ $user->id }}">
                             <button type="submit" class="btn-delete">

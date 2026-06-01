@@ -10,7 +10,7 @@
 <h1 class="page-title mb-20">Edit Watch</h1>
 
 <div class="form-container">
-    <form action="{{ route('updateWatch') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.watches.update') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="hidden" value="{{ $watch->id }}" name="id">
 

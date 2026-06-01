@@ -73,10 +73,10 @@
                     </span>
                 </td>
 
-                <td>{{ $order->created_at->format('d M Y') }}</td>
+                <td>{{ $order->created_at ? $order->created_at->format('d M Y') : 'N/A' }}</td>
 
                 <td>
-                    <form action="{{ route('orderDetails') }}" method="POST" class="action-form">
+                    <form action="{{ route('admin.orders.show') }}" method="POST" class="action-form">
                         @csrf
                         <input type="hidden" name="id" value="{{ $order->id }}">
                         <button type="submit" class="btn-view">
