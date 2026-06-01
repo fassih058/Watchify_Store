@@ -7,28 +7,33 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 8%;
-    height: 90px;
-    background: #ffffff;
-    border-bottom: 1px solid #f2f2f2;
+    height: 92px;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
     position: sticky;
     top: 0;
     z-index: 1000;
     font-family: 'Inter', sans-serif;
+    box-shadow: 0 20px 60px rgba(20, 20, 20, 0.06);
+    backdrop-filter: blur(14px);
 }
 
 .nav-brand {
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 900;
-    color: #000;
+    color: #111;
     text-decoration: none;
     letter-spacing: -1px;
     z-index: 1001;
+    display: inline-flex;
+    align-items: center;
 }
 
 .nav-brand span {
-    color: #666;
-    font-weight: 700;
-    font-size: 32px;
+    color: #d4af37;
+    font-weight: 900;
+    font-size: 34px;
+    margin-left: 4px;
 }
 
 .nav-hamburger {
@@ -39,9 +44,9 @@
 }
 
 .nav-hamburger span {
-    width: 25px;
+    width: 26px;
     height: 2px;
-    background: #000;
+    background: #111;
     margin: 4px 0;
     transition: 0.3s;
     border-radius: 2px;
@@ -49,7 +54,7 @@
 
 .nav-menu {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     list-style: none;
     margin: 0;
     padding: 0;

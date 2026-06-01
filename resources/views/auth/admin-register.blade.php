@@ -40,7 +40,7 @@
 
             <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" name="name" id="name" value="{{ old('name') }}" required placeholder="e.g. Umer Nisar">
+                <input type="text" name="name" id="name" value="{{ old('name') }}" required placeholder="e.g. Fassih Shah">
             </div>
 
             <div class="form-group">

@@ -17,7 +17,7 @@
 <section class="story-section">
     <div class="story-text">
         <h2>A Legacy of Precision</h2>
-        <p>Founded by Umer Nisar, Watchify Store was born from a singular passion: to bridge the gap between historical craftsmanship and contemporary engineering. Our journey began with a simple belief that time is the ultimate luxury.</p>
+        <p>Founded by Fassih Shah, Watchify Store was born from a singular passion: to bridge the gap between historical craftsmanship and contemporary engineering. Our journey began with a simple belief that time is the ultimate luxury.</p>
         <p>We curate timepieces that do more than just record seconds; they capture history. Every gear, spring, and dial in our collection represents a silent companion that marks life's most significant milestones.</p>
     </div>
     <div class="story-image">

@@ -39,7 +39,7 @@
             <div class="input-grid">
                 <div class="field-group full-width">
                     <label for="customer_name">Full Name</label>
-                    <input type="text" id="customer_name" name="customer_name" value="{{ old('customer_name') }}" required placeholder="e.g. Umer Nisar">
+                    <input type="text" id="customer_name" name="customer_name" value="{{ old('customer_name') }}" required placeholder="e.g. Fassih Shah">
                 </div>
 
                 <div class="field-group full-width">
